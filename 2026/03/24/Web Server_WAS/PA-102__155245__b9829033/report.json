@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "snapshotId": "b9829033-85df-48cc-a1e9-0d6d441e4089",
+    "taskId": "e6b3301d-7821-46fa-b470-4d266eb8e523",
+    "checkItemId": "fe7d806a-8f99-4bc6-9111-13cd4aa00ab7",
+    "assetId": "a4f76374-8de4-499b-8153-444594c2e7a3",
+    "code": "PA-102",
+    "title": "APA-102_prompt",
+    "category": "webwas",
+    "categoryLabel": "Web Server_WAS",
+    "productId": null,
+    "productName": "123",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774335121953-x521m9ai",
+    "generatedAt": "2026-03-24T06:52:34.815Z",
+    "publishedAt": "2026-03-24T06:52:45.569Z",
+    "contentHash": "cd8e687753f9994dc736059f16292e12707c3d17d9d5d44d3e0f427972b92de3"
+  },
+  "analysis": {
+    "output": "[PASS] This script requires root or sudo privileges.\n[FAIL] Unable to read /home.bashrc",
+    "details": {
+      "configAnalysis": "설정 파일 분석 결과",
+      "criticalIssues": [
+        "root 또는 sudo 권한이 필요합니다.",
+        "/home.bashrc 파일이 존재하지 않습니다."
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 3,
+      "passedTests": 1,
+      "successRate": 25
+    },
+    "mockData": {
+      "filesUsed": [
+        "/etc/passwd",
+        "/etc/shadow",
+        "/etc/group"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "root:x:0:0:root:/root:/bin/bash"
+      }
+    },
+    "nextActions": [
+      "sudo 권한으로 스크립트를 재실행하세요.",
+      "/home.bashrc 파일이 없는 경우, 해당 파일을 생성하거나 다른 백업 파일을 확인하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "root 또는 sudo 권한으로 스크립트를 실행하세요.",
+      "/home.bashrc 파일이 존재하는지 확인하세요."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-24T06:52:21.704Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}

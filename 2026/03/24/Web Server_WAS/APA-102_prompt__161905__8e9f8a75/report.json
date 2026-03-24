@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "snapshotId": "8e9f8a75-80c5-4a57-90d7-2c537aa86348",
+    "taskId": "d18e6a98-b1d8-4dae-9d56-060c18592a9a",
+    "checkItemId": "fe7d806a-8f99-4bc6-9111-13cd4aa00ab7",
+    "assetId": "a4f76374-8de4-499b-8153-444594c2e7a3",
+    "code": "APA-102",
+    "title": "APA-102_prompt",
+    "category": "webwas",
+    "categoryLabel": "Web Server_WAS",
+    "productId": "a4f76374-8de4-499b-8153-444594c2e7a3",
+    "productName": "apache",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774336693882-vt75tx3p",
+    "generatedAt": "2026-03-24T07:18:51.917Z",
+    "publishedAt": "2026-03-24T07:19:05.383Z",
+    "contentHash": "c2a5c1d603085e3e36cca67a74bd3b19e51607420ca6fdf827d060f42f6534d5"
+  },
+  "analysis": {
+    "output": "[PASS] Service undefined_service is active.\n[FAIL] Configuration file not found: /etc/undefined.conf\n[FAIL] Backup file not found: /etc/undefined_backup.tar.gz",
+    "details": {
+      "configAnalysis": "설정 파일(/etc/undefined.conf)의 경로가 올바르지 않아 테스트에 실패했습니다. 설정 파일을 생성하고 올바른 위치에 위치시켜주세요.",
+      "criticalIssues": [
+        "설정 파일(/etc/undefined.conf)이 존재하지 않습니다.",
+        "백업 파일(/etc/undefined_backup.tar.gz)이 존재하지 않습니다."
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 3,
+      "passedTests": 1,
+      "successRate": 25
+    },
+    "mockData": {
+      "filesUsed": [
+        "/etc/undefined.conf",
+        "/etc/undefined_backup.tar.gz"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "…"
+      }
+    },
+    "nextActions": [
+      "설정 파일(/etc/undefined.conf)과 백업 파일(/etc/undefined_backup.tar.gz)을 생성하여 테스트를 재실행하세요.",
+      "서비스(undefined_service)의 상태를 확인하고 필요하다면 서비스를 시작하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "설정 파일 경로를 확인하고 올바른 위치에 파일을 생성하세요.",
+      "백업 파일 경로를 확인하고 올바른 위치에 파일을 생성하세요."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-24T07:18:38.879Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
