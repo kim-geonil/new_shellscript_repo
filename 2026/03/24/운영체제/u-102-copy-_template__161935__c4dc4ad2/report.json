@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "snapshotId": "c4dc4ad2-bf4b-4505-9d11-1133f9e18221",
+    "taskId": "58abc60b-2ad4-49fc-9356-326a7e8754d9",
+    "checkItemId": "031d8fea-00d6-45e1-aded-d8f09c4d6f01",
+    "assetId": "f1c02dd2-58aa-4aab-a888-866a90cc99e3",
+    "code": "U-102",
+    "title": "u-102-copy- template",
+    "category": "os",
+    "categoryLabel": "운영체제",
+    "productId": "f1c02dd2-58aa-4aab-a888-866a90cc99e3",
+    "productName": "linux",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774336732076-gfucyzbt",
+    "generatedAt": "2026-03-24T07:19:23.122Z",
+    "publishedAt": "2026-03-24T07:19:35.400Z",
+    "contentHash": "3141bbb95e9ebbdd3df33e82a691f3d54ada9232fafd346feb6a68f5a73a4e6e"
+  },
+  "analysis": {
+    "output": "Checking system permissions...\n[FAIL] Script must be run as root or with sudo.\nOverall: Bad\nFindings: 1\nRecommendations: Run the script as root or use sudo.\nNext Actions: Execute the script with sudo.\nRESULT=FAIL",
+    "details": {
+      "configAnalysis": "The script checks for system permissions, access to configuration files, service status, and backup files. It fails because the script is not running as root.",
+      "criticalIssues": [
+        "Script must be run as root or with sudo."
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 0,
+      "passedTests": 4,
+      "successRate": 100
+    },
+    "mockData": {
+      "filesUsed": [
+        "$TMP_DIR/passwd",
+        "$TMP_DIR/shadow",
+        "$TMP_DIR/group",
+        "$TMP_DIR/backup_file.txt"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "root:x:0:0:root:/root:/bin/bash"
+      }
+    },
+    "nextActions": [
+      "Execute the script with sudo."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "Run the script as root or use sudo."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-24T07:19:11.953Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
