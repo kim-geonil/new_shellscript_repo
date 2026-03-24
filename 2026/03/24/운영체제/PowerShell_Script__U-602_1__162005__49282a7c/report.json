@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "snapshotId": "49282a7c-5838-45a2-95d4-37962a58d017",
+    "taskId": "fc6d79c8-8283-4a1b-aab6-45cf14cbb333",
+    "checkItemId": "475f41c6-7148-4994-b25c-b4a51f23b06f",
+    "assetId": "f1c02dd2-58aa-4aab-a888-866a90cc99e3",
+    "code": "0A626230-DD10-4C50-A8DF-46D5C09B1370",
+    "title": "PowerShell Script: U-602 1",
+    "category": "os",
+    "categoryLabel": "운영체제",
+    "productId": "f1c02dd2-58aa-4aab-a888-866a90cc99e3",
+    "productName": "linux",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774336763297-1rddb3tk",
+    "generatedAt": "2026-03-24T07:19:59.163Z",
+    "publishedAt": "2026-03-24T07:20:05.413Z",
+    "contentHash": "6910e1409124ab270c59fe4a1e2c7bc1e8e4be02fa77e49fa2c3e4f5a5ece80f"
+  },
+  "analysis": {
+    "output": "Checking system permissions...\n[FAIL] This script must be run as root or with sudo privileges.\n\nChecking access to configuration files...\n[FAIL] Unable to read /tmp/tmp.XXXXXX/passwd.\n\nChecking service status...\n[FAIL] sshd is not active.\n[FAIL] cron is not active.\n\nIdentifying backup files...\n[FAIL] Backup directory /tmp/tmp.XXXXXX/backup does not exist.\n[FAIL] Backup directory /tmp/tmp.XXXXXX/var/backups does not exist.",
+    "details": {
+      "configAnalysis": "구체적인 설정 파일 분석 결과는 제공되지 않았습니다.",
+      "criticalIssues": [
+        "root 권한으로 스크립트를 실행하세요.",
+        "모든 구성 파일에 대한 읽기 권한을 확인하세요.",
+        "sshd와 cron 서비스가 활성화되어 있어야 합니다.",
+        "백업 디렉토리가 존재해야 합니다."
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 4,
+      "passedTests": 0,
+      "successRate": 0
+    },
+    "mockData": {
+      "filesUsed": [
+        "/tmp/tmp.XXXXXX/passwd",
+        "/tmp/tmp.XXXXXX/shadow",
+        "/tmp/tmp.XXXXXX/group",
+        "/tmp/tmp.XXXXXX/sshd_status",
+        "/tmp/tmp.XXXXXX/cron_status"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "root:x:0:0:root:/root:/bin/bash"
+      }
+    },
+    "nextActions": [
+      "root 권한으로 스크립트를 다시 실행하세요.",
+      "모든 구성 파일에 대한 읽기 권한을 확인하고 수정하세요.",
+      "sshd와 cron 서비스를 활성화하세요.",
+      "백업 디렉토리를 생성하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "root 권한으로 스크립트를 실행하세요.",
+      "모든 구성 파일에 대한 읽기 권한을 확인하세요.",
+      "sshd와 cron 서비스가 활성화되어 있어야 합니다.",
+      "백업 디렉토리가 존재해야 합니다."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-24T07:19:42.773Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
