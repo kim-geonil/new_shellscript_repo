@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "snapshotId": "b3cb7ac6-2a22-4ca2-9517-f2a2d8e671bd",
+    "taskId": "df356b95-e30c-4478-b4a5-4acea24c018f",
+    "checkItemId": "5708269d-87c7-458f-ae41-2a39b18eb26a",
+    "assetId": "268ba769-bfdb-4f20-99ce-c908ae3e327f",
+    "code": "NX-102",
+    "title": "NGINX-102_prompt",
+    "category": "webwas",
+    "categoryLabel": "Web Server_WAS",
+    "productId": "268ba769-bfdb-4f20-99ce-c908ae3e327f",
+    "productName": "nginx",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774334173004-rj83f71k",
+    "generatedAt": "2026-03-24T06:36:45.121Z",
+    "publishedAt": "2026-03-24T06:50:30.391Z",
+    "contentHash": "9a59ae60e8c23d080e5c757d2f08c83e67bdae8bc10e22cc4d83a57a5a16f5d5"
+  },
+  "analysis": {
+    "output": "Checking system permissions...\nFAIL: This script must be run as root or with sudo privileges.\n\nConfiguration File Path and Access Permissions...\nFile: /etc/nginx/nginx.conf\n-rw-r--r-- 1 root root 34 Mar 24 06:36 /etc/nginx/nginx.conf\n\nService Status and Dependencies...\n● nginx.service - A high performance web server and a reverse proxy server\n   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)\n   Active: inactive (dead)\n\nIdentifying backup necessary files...\nBackup file: /etc/nginx/nginx.conf",
+    "details": {
+      "configAnalysis": "설정 파일 /etc/nginx/nginx.conf의 접근 권한은 올바르게 설정되어 있습니다. 그러나 nginx 서비스가 실행 중이지 않습니다.",
+      "criticalIssues": [
+        "이 스크립트를 root 사용자 또는 sudo 권한으로 실행하세요."
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 0,
+      "passedTests": 4,
+      "successRate": 100
+    },
+    "mockData": {
+      "filesUsed": [
+        "/etc/nginx/nginx.conf"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/nginx/nginx.conf": "server { listen 80; server_name localhost; }"
+      }
+    },
+    "nextActions": [
+      "sudo 권한으로 스크립트를 다시 실행하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "이 스크립트를 root 사용자 또는 sudo 권한으로 실행하세요."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-24T06:36:31.925Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
