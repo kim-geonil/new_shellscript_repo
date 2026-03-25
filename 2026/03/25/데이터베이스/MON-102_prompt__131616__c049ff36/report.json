@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "snapshotId": "c049ff36-ddff-4ca7-af81-2f71846eaa50",
+    "taskId": "2b8fac68-e3af-4e69-b718-8555d79f6310",
+    "checkItemId": "1e44f1a5-b1f7-4c2f-ae0a-3d330b7c4d39",
+    "assetId": "d13054f6-1ebf-457b-b529-3484eb41e3e7",
+    "code": "MON-102",
+    "title": "MON-102_prompt",
+    "category": "dbms",
+    "categoryLabel": "데이터베이스",
+    "productId": "d13054f6-1ebf-457b-b529-3484eb41e3e7",
+    "productName": "Postgres",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774412116784-73ljrhn7",
+    "generatedAt": "2026-03-25T04:15:57.851Z",
+    "publishedAt": "2026-03-25T04:16:16.782Z",
+    "contentHash": "3e6c5ad471057e8b700814aa605ff0627b7f8c3380bc5862823115ee59c61793"
+  },
+  "analysis": {
+    "output": "+++   MON-102   +++\n---   MON-102   ---\nMongoDB configuration file not found: /etc/mongod.conf\n---   MON-102   ---\nFinal Result: Fail",
+    "details": {
+      "checkType": "MON-102",
+      "configAnalysis": "설정 파일(/etc/mongod.conf)이 존재하지 않습니다.",
+      "criticalIssues": [
+        "MongoDB configuration file not found: /etc/mongod.conf"
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 1,
+      "failedTests": 1,
+      "passedTests": 0,
+      "successRate": 0
+    },
+    "mockData": {
+      "filesUsed": [
+        "/etc/mongod.conf"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "…"
+      }
+    },
+    "nextActions": [
+      "MongoDB 설정 파일을 검토하고 필요한 변경 사항을 적용하세요.",
+      "다시 스크립트를 실행하여 결과가 PASS인지 확인하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "MongoDB의 설정 파일(/etc/mongod.conf)을 확인하세요.",
+      "설정 파일에 'security' 섹션과 'authorization' 항목이 포함되어 있는지 확인하세요."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-25T04:15:46.146Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
