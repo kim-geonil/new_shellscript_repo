@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "snapshotId": "bbe319ac-17f5-4824-9001-4fefe29f7ae7",
+    "taskId": "f5d5cc5d-f246-4309-872d-70ac1c70ee0f",
+    "checkItemId": "ea082286-7c0e-490d-a9db-a7b53344523e",
+    "assetId": "d13054f6-1ebf-457b-b529-3484eb41e3e7",
+    "code": "POS-101",
+    "title": "POS-101 점검 지침",
+    "category": "dbms",
+    "categoryLabel": "데이터베이스",
+    "productId": "d13054f6-1ebf-457b-b529-3484eb41e3e7",
+    "productName": "Postgres",
+    "scriptType": "bash",
+    "model": null,
+    "generationRunId": "1774405879137-jj55ax3v",
+    "generatedAt": "2026-03-25T02:31:56.484Z",
+    "publishedAt": "2026-03-25T02:32:16.197Z",
+    "contentHash": "38371fcb82d3ec915e9af3dfafee27e128e5e12646312ab1c3caf2c1d4be74e6"
+  },
+  "analysis": {
+    "output": "Final Result: PASS\n",
+    "details": {
+      "checkType": "POS-101",
+      "configAnalysis": "qualys_conf.ini 파일에서 postgresql 설정을 확인했습니다.",
+      "criticalIssues": [
+        "postgres 계정의 로그인 권한이 거부됨"
+      ]
+    },
+    "success": true,
+    "summary": {
+      "totalTests": 4,
+      "failedTests": 1,
+      "passedTests": 3,
+      "successRate": 75
+    },
+    "mockData": {
+      "filesUsed": [
+        "qualys_conf.ini",
+        "pg_hba.conf"
+      ],
+      "dataSource": "AI 시뮬레이션",
+      "fileContents": {
+        "/etc/passwd": "…"
+      }
+    },
+    "nextActions": [
+      "postgresql 설정 파일을 확인하고 필요한 변경 사항을 적용하세요.",
+      "로그인 테스트를 다시 수행하여 변경 사항이 효과적으로 적용되었는지 확인하세요."
+    ],
+    "executionTime": 1000,
+    "recommendations": [
+      "postgresql의 rolcanlogin 설정을 't'로 변경하여 로그인 가능하도록 수정하세요.",
+      "postgresql의 rolpassword를 설정하여 비밀번호 보안을 강화하세요."
+    ],
+    "testEnvironment": {
+      "type": "simulation",
+      "osType": "Ubuntu 22.04.3 LTS",
+      "osVersion": "22.04.3",
+      "environment": "Docker Container ubuntu:22.04",
+      "architecture": "x86_64",
+      "kernelVersion": "5.15.0-78-generic",
+      "testTimestamp": "2026-03-25T02:31:45.733Z",
+      "systemResources": {
+        "cpu": "…",
+        "disk": "…",
+        "memory": "…"
+      },
+      "simulationEngine": "AI 시뮬레이션",
+      "installedPackages": "…",
+      "userConfiguration": {}
+    }
+  }
+}
